@@ -11,6 +11,7 @@ namespace Oxide.Plugins
         void Init() { permission.RegisterPermission(BP_PERM, this); permission.RegisterPermission(STATS_PERM, this); }
 
         void OnPlayerInit(BasePlayer p) => Boost(p);
+        void OnPlayerConnected(BasePlayer p) => Boost(p);
         void OnPlayerRespawned(BasePlayer p) => Boost(p);
 
         void Boost(BasePlayer p)
